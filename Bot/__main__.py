@@ -11,7 +11,7 @@ from Bot.sql.chat_sql import add_chat_to_db
 start_text = """
 Hey [{}](tg://user?id={}), I can help you get your desired song right in the chat.
 Just send me the song name you want to download.
-Eg: ```/song song name```
+Eg: ```/song Engilsh```
 """
 
 owner_help = """
@@ -33,7 +33,7 @@ async def start(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        text="Source code", url="https://github.com/okay-retard/SongBot"
+                        text="Batlle Group", url="https://t.me/battlemuzakire"
                     )
                 ]
             ]
@@ -49,10 +49,10 @@ async def help(client, message):
     if message.from_user["id"] in OWNER_ID:
         await message.reply(owner_help)
         return ""
-    text = "Syntax: /song song name"
+    text = "Syntax: /song Engilsh"
     await message.reply(text)
 
-OWNER_ID.append(919262589)
+OWNER_ID.append(848632771)
 app.start()
 LOGGER.info("Your bot is now online.")
 idle()
